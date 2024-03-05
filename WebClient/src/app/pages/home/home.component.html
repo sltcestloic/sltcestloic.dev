@@ -1,9 +1,12 @@
 <div class="home-page">
-    <div class="cards-container">
+    <div class="cards-container" *ngIf="!isMobile">
         <project-card ProjectName="Bet Bot" ProjectDescription="Bot Discord de paris sportifs virtuels et automatisés"
             ProjectImage="assets/images/bet-bot.png" ProjectLink="https://bet-bot.sltcestloic.dev"></project-card>
         <project-card ProjectName="sltcestloic.dev"
             ProjectDescription="Le site de zinzin sur lequel vous êtes la eheh 🤓"
             ProjectImage="assets/images/sltcestloic.png"></project-card>
+    </div>
+    <div class="no-mobile" *ngIf="isMobile">
+        J'ai pas encore fait la vue mobile voila désolé mais faut regarder sur pc
     </div>
 </div>
