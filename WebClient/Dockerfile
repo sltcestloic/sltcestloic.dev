@@ -2,12 +2,14 @@ FROM node:20
 
 WORKDIR /usr/app/webclient
 
-COPY src src/
-
-COPY *.json .
+COPY . .
 
 RUN npm install
 
-RUN npm install -g @angular/cli
+RUN npm run build
 
-ENTRYPOINT [ "ng", "serve" , "--host=0.0.0.0" ]
+RUN npm install -g angular-http-server
+
+WORKDIR /usr/app/webclient/dist/web-client/browser
+
+ENTRYPOINT [ "angular-http-server", "-p", "4200"]

@@ -12,8 +12,16 @@ export class ProjectCardComponent {
 	@Input() public ProjectName: string;
 	@Input() public ProjectDescription: string;
 	@Input() public ProjectImage: string;
+	@Input() public ProjectLink: string = null;
 
 	@ViewChild('projectCard') projectCard: HTMLElement;
+
+	public handleCardClick() {
+		if (!this.ProjectLink) {
+			return;
+		}
+		window.open(this.ProjectLink, '_blank');
+	}
 
 	@HostListener('mousemove', ['$event'])
 	handleMousemove(event: MouseEvent) {

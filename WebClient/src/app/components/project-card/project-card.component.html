@@ -1,4 +1,4 @@
-<div class="project-card-container">
+<div class="project-card-container" (click)="handleCardClick()" [class.clickable]="ProjectLink !== null">
     <div class="project-card">
         <img class="project-image" [src]="ProjectImage" draggable="false">
         <div class="project-details">
