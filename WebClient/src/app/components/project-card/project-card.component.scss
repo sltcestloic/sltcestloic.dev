@@ -5,14 +5,16 @@
 .project-card {
 
     padding: 1rem;
-    background-color: #0F0F0F;
     border-radius: 15px;
     width: 260px;
     height: 290px;
+    background-color: #0F0F0F;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    user-select: none;
 
     .project-image {
         height: 180px;
