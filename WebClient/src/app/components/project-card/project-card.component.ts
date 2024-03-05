@@ -38,7 +38,7 @@ export class ProjectCardComponent {
 	@HostListener('mouseleave', ['$event'])
 	handleMouseleave(event: MouseEvent) {
 		const target = (event.currentTarget as HTMLElement).firstChild.firstChild as HTMLElement;
-		target.style.transition = `transform 0.5s ease`;
+		target.style.transition = `transform 0.7s ease`;
 		target.style.transform = `rotateX(0deg) rotateY(0deg)`;
 	}
 }
