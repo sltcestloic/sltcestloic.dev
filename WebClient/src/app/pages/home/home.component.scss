@@ -1,0 +1,18 @@
+.home-page {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .cards-container {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cest-le-chantier-ou-quoi-lequipe {
+        user-select: none;
+        font-size: 150px;
+    }
+}
