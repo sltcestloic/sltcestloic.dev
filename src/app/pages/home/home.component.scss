@@ -23,4 +23,20 @@
         background-color: var(--border-color);
         margin: 10px 0px;
     }
+
+    nav {
+        font-family: 'Terminal';
+
+        .nav-item {
+            .braces {
+                color: var(--background-color);
+            }
+
+            &:hover {
+                .braces {
+                    color: var(--text-color-primary);
+                }
+            }
+        }
+    }
 }
