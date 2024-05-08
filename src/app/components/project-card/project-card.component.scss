@@ -9,8 +9,8 @@
 
         padding: 1rem;
         border-radius: 15px;
-        width: 260px;
-        height: 290px;
+        width: 180px;
+        height: 220px;
         background-color: #0F0F0F;
 
         display: flex;
@@ -20,7 +20,7 @@
         user-select: none;
 
         .project-image {
-            height: 180px;
+            height: 100px;
             border-radius: 8px;
             object-fit: cover;
         }
@@ -31,11 +31,12 @@
 
             .project-name {
                 font-weight: 550;
-                margin: 0.5rem 0px
+                margin: 0.5rem 0px;
+                font-size: 14px;
             }
 
             .project-description {
-                font-size: 14px;
+                font-size: 12px;
                 color: #b3b3b3;
             }
         }
