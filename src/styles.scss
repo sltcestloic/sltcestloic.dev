@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-    height: 100%;
-    overflow: hidden;
-    margin: 0;
-}
-
 :root {
     --background-color: #09090B;
     --background-color-accent: #111820;
@@ -16,4 +10,23 @@ html, body {
     --border-color: #27272A;
     --slider-color: #272629;
     --mdc-dialog-container-color: transparent;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background: var(--background-color);
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: var(--slider-color);
+        border-radius: 10px;
+    }
 }
