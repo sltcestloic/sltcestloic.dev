@@ -5,3 +5,13 @@ html, body {
     overflow: hidden;
     margin: 0;
 }
+
+:root {
+    --background-color: #09090B;
+    --background-color-accent: #111820;
+    --text-color-primary: #d4d4d8;
+    --text-color-secondary: #A1A1AA;
+    --border-color: #27272A;
+    --slider-color: #272629;
+    --mdc-dialog-container-color: transparent;
+}

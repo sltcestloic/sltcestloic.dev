@@ -1,27 +1,16 @@
 .home-page {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    max-width: 700px;
+    margin: auto;
+    padding: 40px;
 
-    .cards-container {
-        display: grid;
-        gap: 1rem;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .no-mobile {
+    .home-nav {
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
-        justify-content: center;
-        text-align: center;
-        font-size: 20px;
 
-        img {
-            height: 500px;
-            margin-top: 20px;
+        a {
+            color: inherit;
+            text-decoration: inherit;
         }
     }
 }
