@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   web-client:
-    build: ./WebClient
+    build: .
     container_name: sltcestloic-web-client
     ports:
       - "4200:4200"
