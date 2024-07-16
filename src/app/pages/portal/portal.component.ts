@@ -3,7 +3,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { ProjectCardComponent } from '../../components/project-card/project-card.component';
 
 @Component({
-	selector: 'app-home',
+	selector: 'app-portal',
 	standalone: true,
 	imports: [ProjectCardComponent, NgIf],
 	templateUrl: './portal.component.html',
