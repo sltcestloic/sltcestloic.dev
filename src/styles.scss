@@ -12,8 +12,9 @@
     --mdc-dialog-container-color: transparent;
 }
 
-html, body {
+html, body:has(.cards-container) {
     height: 100%;
+
 }
 
 body {
