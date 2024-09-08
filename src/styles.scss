@@ -12,20 +12,20 @@
     --mdc-dialog-container-color: transparent;
 }
 
-html, body:has(.cards-container) {
+html,
+body {
     height: 100%;
-
 }
 
 body {
     &::-webkit-scrollbar {
         width: 10px;
     }
-    
+
     &::-webkit-scrollbar-track {
         background: var(--background-color);
     }
-    
+
     &::-webkit-scrollbar-thumb {
         background: var(--slider-color);
         border-radius: 10px;
