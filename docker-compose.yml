@@ -7,9 +7,3 @@ services:
     ports:
       - "4200:4200"
     restart: always
-    networks:
-      - caddy
-
-networks:
-   caddy:
-      external: true
