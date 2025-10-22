@@ -16,6 +16,6 @@ import { SquirrelComponent } from '../../components/squirrel/squirrel.component'
 export class HomeComponent {
 
     public handleNavClick() {
-        alert('g pas encore fait ca arrive fort la team 🔥🔥🔥 surveillez le ciel 👀⌛🌎 le monde chicoo');
+        alert('malheureusement ce bouton ne fait rien pour l\'instant mais j\'ai bon espoir que ce soit le cas un jour');
     }
 }
