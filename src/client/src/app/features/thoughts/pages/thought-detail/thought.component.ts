@@ -1,8 +1,9 @@
 import { AsyncPipe, DatePipe, NgIf } from '@angular/common';
 import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { marked } from 'marked';
-import { Observable } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 import { SiteHeaderComponent } from '../../../../shared/ui/site-header/site-header.component';
 import { ThoughtsService } from '../../api/thoughts.service';
 import { ThoughtPost } from '../../models/thought.model';
@@ -20,9 +21,16 @@ export class ThoughtComponent {
 
     public constructor(
         private readonly route: ActivatedRoute,
-        private readonly thoughtsService: ThoughtsService
+        private readonly thoughtsService: ThoughtsService,
+        private readonly title: Title
     ) {
-        this.post$ = this.thoughtsService.findOne(this.route.snapshot.paramMap.get('slug'));
+        this.post$ = this.thoughtsService.findOne(this.route.snapshot.paramMap.get('slug')).pipe(
+            tap(post => {
+                if (post) {
+                    this.title.setTitle(`${post.title} - sltcestloic.dev`);
+                }
+            })
+        );
     }
 
     public renderMarkdown(markdown: string): string {

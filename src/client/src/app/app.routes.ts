@@ -3,6 +3,7 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
     {
         path: 'thoughts',
+        title: "loic's thoughts - sltcestloic.dev",
         loadComponent: () => import('./features/thoughts/pages/thoughts-list/thoughts.component').then(m => m.ThoughtsComponent)
     },
     {
@@ -11,6 +12,7 @@ export const routes: Routes = [
     },
     {
         path: 'portal',
+        title: "portal - sltcestloic.dev",
         loadComponent: () => import('./features/portal/pages/portal/portal.component').then(m => m.PortalComponent)
     },
     {
