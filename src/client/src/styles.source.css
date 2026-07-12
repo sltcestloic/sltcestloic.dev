@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+    --background-color: #09090B;
+    --background-color-accent: #111820;
+    --text-color-primary: #d4d4d8;
+    --text-color-secondary: #A1A1AA;
+    --border-color: #27272A;
+    --slider-color: #272629;
+    --mdc-dialog-container-color: transparent;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--background-color);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--slider-color);
+    border-radius: 10px;
+}

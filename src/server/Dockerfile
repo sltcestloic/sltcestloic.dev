@@ -3,7 +3,7 @@ FROM node:22 AS build
 WORKDIR /usr/app
 
 COPY package*.json ./
-RUN npm ci
+RUN npm ci --loglevel=error --no-audit --no-fund --update-notifier=false
 
 COPY src/server ./src/server
 RUN npm run server:build
@@ -15,7 +15,7 @@ ENV NODE_ENV=production
 WORKDIR /usr/app
 
 COPY package*.json ./
-RUN npm ci --omit=dev
+RUN npm ci --omit=dev --loglevel=error --no-audit --no-fund --update-notifier=false
 
 COPY --from=build /usr/app/src/server/dist ./src/server/dist
 
