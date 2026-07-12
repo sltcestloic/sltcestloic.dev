@@ -8,8 +8,13 @@
 
 # Node
 /node_modules
+/src/client/node_modules
+/src/server/node_modules
 npm-debug.log
 yarn-error.log
+
+# Environment
+/.env
 
 # IDEs and editors
 .idea/
@@ -30,9 +35,13 @@ yarn-error.log
 
 # Miscellaneous
 /.angular/cache
+/src/client/.angular/cache
 .sass-cache/
 /connect.lock
 /coverage
+/src/client/dist
+/src/client/src/environments/environment.ts
+/src/server/dist
 /libpeerconnection.log
 testem.log
 /typings

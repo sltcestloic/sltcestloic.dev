@@ -1,0 +1,36 @@
+<div class="home-page select-none">
+
+    <site-header></site-header>
+
+    <div class="py-10">
+        <squirrel></squirrel>
+    </div>
+
+    <p class="text-[#858589] text-center mb-4">There is no portfolio, I love you</p>
+
+    <div class="separator"></div>
+
+    <nav class="flex justify-between items-center py-3">
+        <div class="nav-item text-lg flex items-center gap-2">
+            <p class="braces">[</p>
+            <a routerLink="/thoughts">thoughts</a>
+            <p class="braces">]</p>
+        </div>
+        <div class="nav-item text-lg flex items-center gap-2" (click)="handleNavClick()">
+            <p class="braces">[</p>
+            <a routerLink="/">images</a>
+            <p class="braces">]</p>
+        </div>
+        <div class="nav-item text-lg flex items-center gap-2" (click)="handleNavClick()">
+            <p class="braces">[</p>
+            <a routerLink="/">library</a>
+            <p class="braces">]</p>
+        </div>
+    </nav>
+
+    <div class="separator"></div>
+
+    <div class="flex justify-center">
+        <img class="max-h-80 rounded pt-5" src="assets/images/chat.webp" draggable="false">
+    </div>
+</div>

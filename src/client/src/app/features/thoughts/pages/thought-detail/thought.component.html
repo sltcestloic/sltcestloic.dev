@@ -1,0 +1,25 @@
+<div class="thought-page select-none">
+    <site-header></site-header>
+
+    <article *ngIf="post$ | async as post; else missingPost">
+        <div class="post-meta">
+            <span>{{ post.createdAt | date:'yyyy-MM-dd' }}</span>
+            <span>{{ post.readTime }}</span>
+        </div>
+
+        <h1>{{ post.title }}</h1>
+        <p class="description">{{ post.description }}</p>
+
+        <div class="separator"></div>
+
+        <div class="post-content" [innerHTML]="renderMarkdown(post.markdown)"></div>
+    </article>
+
+    <ng-template #missingPost>
+        <section class="missing-post">
+            <p class="eyebrow">404</p>
+            <h1>Thought not found</h1>
+            <a routerLink="/thoughts">back to thoughts</a>
+        </section>
+    </ng-template>
+</div>

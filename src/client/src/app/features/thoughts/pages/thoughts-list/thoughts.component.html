@@ -1,0 +1,31 @@
+<div class="thoughts-page select-none">
+    <site-header></site-header>
+
+    <section class="intro">
+        <h1>Thoughts</h1>
+    </section>
+
+    <div class="separator"></div>
+
+    <ng-container *ngIf="posts$ | async as posts">
+        <section class="posts-list" aria-label="Blog posts" *ngIf="posts.length > 0; else emptyThoughts">
+            <article *ngFor="let post of posts" class="post-preview">
+                <div class="post-meta">
+                    <span>{{ post.createdAt | date:'yyyy-MM-dd' }}</span>
+                    <span>{{ post.readTime }}</span>
+                </div>
+                <h2>
+                    <a [routerLink]="['/thoughts', post.slug]">{{ post.title }}</a>
+                </h2>
+                <p>{{ post.description }}</p>
+            </article>
+        </section>
+    </ng-container>
+
+    <ng-template #emptyThoughts>
+        <section class="empty-thoughts">
+            <p>Unfortunately, no thoughts are available yet</p>
+            <img src="assets/images/uhh.webp" alt="" draggable="false">
+        </section>
+    </ng-template>
+</div>
