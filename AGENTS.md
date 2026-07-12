@@ -10,4 +10,5 @@ Critical rules for agents:
 - Public read endpoints must not require client-shipped secrets. Protect only private write or administration operations.
 - Before finishing security-sensitive changes, scan for accidental secrets or known default credentials.
 - Keep frontend code organized with a feature-based Angular structure. Shared UI and cross-feature utilities belong under shared/core areas, not inside individual feature folders.
+- Components used by only one feature belong inside that feature, for example under `features/<feature>/components`, instead of `shared`.
 - When asked to commit files, write a concise message with lowercase only

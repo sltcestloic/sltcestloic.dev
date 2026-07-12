@@ -1,6 +1,6 @@
 import { NgIf } from '@angular/common';
 import { Component, HostListener, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { ProjectCardComponent } from '../../../../shared/ui/project-card/project-card.component';
+import { ProjectCardComponent } from '../../components/project-card/project-card.component';
 
 @Component({
 	selector: 'app-portal',
