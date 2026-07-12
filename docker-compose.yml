@@ -8,8 +8,6 @@ services:
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-    ports:
-      - "127.0.0.1:5432:5432"
     volumes:
       - postgres-data:/var/lib/postgresql/data
     restart: always
@@ -29,7 +27,7 @@ services:
       TYPEORM_SYNCHRONIZE: ${TYPEORM_SYNCHRONIZE}
       CORS_ORIGIN: ${CORS_ORIGIN}
     ports:
-      - "127.0.0.1:3000:3000"
+      - "127.0.0.1:3001:3000"
     depends_on:
       - postgres
     restart: always
@@ -40,7 +38,7 @@ services:
       dockerfile: ./src/client/Dockerfile
     container_name: sltcestloic-client
     ports:
-      - "127.0.0.1:4200:4200"
+      - "127.0.0.1:4300:4200"
     restart: always
 
 volumes:
