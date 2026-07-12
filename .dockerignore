@@ -1,0 +1,11 @@
+.git
+.angular
+dist
+node_modules
+src/client/.angular
+src/client/dist
+src/client/node_modules
+src/server/dist
+src/server/node_modules
+npm-debug.log
+.DS_Store
