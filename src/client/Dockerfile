@@ -11,6 +11,6 @@ RUN npm run client:build
 
 RUN npm install -g angular-http-server --loglevel=error --no-audit --no-fund --update-notifier=false
 
-WORKDIR /usr/app/src/client/dist/client
+WORKDIR /usr/app/src/client/dist/client/browser
 
 ENTRYPOINT [ "angular-http-server", "-p", "4200"]
