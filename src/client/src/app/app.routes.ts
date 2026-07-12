@@ -12,11 +12,12 @@ export const routes: Routes = [
     },
     {
         path: 'portal',
-        title: "portal - sltcestloic.dev",
+        title: 'portal - sltcestloic.dev',
         loadComponent: () => import('./features/portal/pages/portal/portal.component').then(m => m.PortalComponent)
     },
     {
         path: '**',
+        title: 'sltcestloic.dev',
         loadComponent: () => import('./features/home/pages/home/home.component').then(m => m.HomeComponent)
     },
 ];
