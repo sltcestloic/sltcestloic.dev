@@ -21,7 +21,7 @@ export class ProjectCardComponent {
 		if (!this.ProjectLink) {
 			return;
 		}
-		window.open(this.ProjectLink, (this.ProjectLink.startsWith(window.location.href)) ? '_self' : '_blank');
+		window.open(this.ProjectLink, (this.ProjectLink.startsWith('https://sltcestloic.dev')) ? '_self' : '_blank');
 	}
 
 	@HostListener('mousemove', ['$event'])
