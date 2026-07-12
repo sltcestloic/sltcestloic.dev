@@ -1,5 +1,5 @@
 import { NgIf } from '@angular/common';
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ProjectCardComponent } from '../../components/project-card/project-card.component';
 
 @Component({
@@ -7,6 +7,7 @@ import { ProjectCardComponent } from '../../components/project-card/project-card
 	standalone: true,
 	imports: [ProjectCardComponent, NgIf],
 	templateUrl: './portal.component.html',
+	changeDetection: ChangeDetectionStrategy.Eager,
 	styleUrl: './portal.component.scss'
 })
 export class PortalComponent implements OnInit {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { bootstrapTwitterX } from '@ng-icons/bootstrap-icons';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
@@ -11,6 +11,7 @@ import { SquirrelComponent } from '../../components/squirrel/squirrel.component'
     imports: [RouterModule, SquirrelComponent, NgIconComponent],
     providers: [provideIcons({ octMarkGithub, bootstrapTwitterX})],
     templateUrl: './home.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './home.component.scss'
 })
 export class HomeComponent {

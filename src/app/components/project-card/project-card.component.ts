@@ -1,10 +1,11 @@
-import { Component, HostListener, Input, ViewChild } from '@angular/core';
+import { Component, HostListener, Input, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
 	selector: 'project-card',
 	standalone: true,
 	imports: [],
 	templateUrl: './project-card.component.html',
+	changeDetection: ChangeDetectionStrategy.Eager,
 	styleUrl: './project-card.component.scss'
 })
 export class ProjectCardComponent {
@@ -20,7 +21,7 @@ export class ProjectCardComponent {
 		if (!this.ProjectLink) {
 			return;
 		}
-		window.open(this.ProjectLink, '_blank');
+		window.open(this.ProjectLink, (this.ProjectLink.startsWith(window.location.href)) ? '_self' : '_blank');
 	}
 
 	@HostListener('mousemove', ['$event'])
