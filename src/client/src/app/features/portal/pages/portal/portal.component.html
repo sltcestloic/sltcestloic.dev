@@ -5,20 +5,27 @@
         </svg>
     </a>
 
-    <div class="cards-container" *ngIf="!isMobile">
-        <project-card ProjectName="Bet Bot" ProjectDescription="Sports betting on discord with virtual currency"
-            ProjectImage="assets/images/bet-bot.webp" ProjectLink="https://bet-bot.sltcestloic.dev"></project-card>
+    <main class="portal-content">
+        <div class="portal-heading">
+            <squirrel></squirrel>
+            <h1>portal</h1>
+        </div>
 
-        <project-card ProjectName="sltcestloic.dev" ProjectDescription="Personal website"
-            ProjectImage="assets/images/ascii-squirrel.webp" ProjectLink="https://sltcestloic.dev"></project-card>
+        <div class="cards-container" *ngIf="!isMobile">
+            <project-card ProjectName="Bet Bot" ProjectDescription="Turn sport prediction into friendly competition on your Discord server"
+                ProjectImage="assets/images/bet-bot.webp" ProjectLink="https://bet-bot.sltcestloic.dev"></project-card>
 
-        <project-card ProjectName="MDG Dashboard" ProjectDescription="Tracker & Analytics dashboard for Solana wallets and bots"
-            ProjectLink="https://mdg-dashboard.sltcestloic.dev"></project-card>
-    </div>
-    <div class="no-mobile" *ngIf="isMobile">
-        <span style="margin-bottom: 40px;">J'ai pas encore fait la vue mobile voila désolé mais faut regarder sur
-            pc</span>
-        <span>Ci joint photo de chien pour compenser</span>
-        <img src="assets/images/toutou.webp" alt="">
-    </div>
+            <project-card ProjectName="sltcestloic.dev" ProjectDescription="Personal website"
+                ProjectImage="assets/images/ascii-squirrel.webp" ProjectLink="https://sltcestloic.dev"></project-card>
+
+            <project-card ProjectName="MDG Dashboard" ProjectDescription="Tracker & Analytics dashboard for Solana wallets and bots"
+                ProjectLink="https://mdg-dashboard.sltcestloic.dev"></project-card>
+        </div>
+        <div class="no-mobile" *ngIf="isMobile">
+            <span style="margin-bottom: 40px;">J'ai pas encore fait la vue mobile voila désolé mais faut regarder sur
+                pc</span>
+            <span>Ci joint photo de chien pour compenser</span>
+            <img src="assets/images/toutou.webp" alt="">
+        </div>
+    </main>
 </div>

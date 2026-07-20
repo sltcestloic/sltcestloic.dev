@@ -13,6 +13,31 @@
         linear-gradient(to right, rgba(255, 255, 255, .01) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(255, 255, 255, .01) 1px, transparent 1px);
 
+    .portal-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .portal-heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .5rem;
+
+        squirrel {
+            --squirrel-font-size: 9px;
+        }
+
+        h1 {
+            margin: 0;
+            font-family: 'Terminal';
+            font-size: 22px;
+            font-weight: normal;
+        }
+    }
+
     .back-button {
         position: fixed;
         top: 20px;
