@@ -1,4 +1,10 @@
 <div class="portal-page">
+    <a class="back-button" routerLink="/" aria-label="Back to home">
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M15 18l-6-6 6-6"></path>
+        </svg>
+    </a>
+
     <div class="cards-container" *ngIf="!isMobile">
         <project-card ProjectName="Bet Bot" ProjectDescription="Sports betting on discord with virtual currency"
             ProjectImage="assets/images/bet-bot.webp" ProjectLink="https://bet-bot.sltcestloic.dev"></project-card>

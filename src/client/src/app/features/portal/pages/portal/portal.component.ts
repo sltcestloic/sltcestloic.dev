@@ -1,11 +1,12 @@
 import { NgIf } from '@angular/common';
 import { Component, HostListener, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { ProjectCardComponent } from '../../components/project-card/project-card.component';
 
 @Component({
 	selector: 'app-portal',
 	standalone: true,
-	imports: [ProjectCardComponent, NgIf],
+	imports: [ProjectCardComponent, NgIf, RouterLink],
 	templateUrl: './portal.component.html',
 	changeDetection: ChangeDetectionStrategy.Eager,
 	styleUrl: './portal.component.scss'
