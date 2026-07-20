@@ -12,8 +12,4 @@ import { SquirrelComponent } from '../../../../shared/ui/squirrel/squirrel.compo
     styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-
-    public handleNavClick() {
-        alert('malheureusement ce bouton ne fait rien pour l\'instant mais j\'ai bon espoir que ce soit le cas un jour');
-    }
 }

@@ -10,20 +10,15 @@
 
     <div class="separator"></div>
 
-    <nav class="flex justify-between items-center py-3">
+    <nav class="flex justify-center items-center gap-8 py-3">
         <div class="nav-item text-lg flex items-center gap-2">
             <p class="braces">[</p>
             <a routerLink="/thoughts">thoughts</a>
             <p class="braces">]</p>
         </div>
-        <div class="nav-item text-lg flex items-center gap-2" (click)="handleNavClick()">
+        <div class="nav-item text-lg flex items-center gap-2">
             <p class="braces">[</p>
-            <a routerLink="/">images</a>
-            <p class="braces">]</p>
-        </div>
-        <div class="nav-item text-lg flex items-center gap-2" (click)="handleNavClick()">
-            <p class="braces">[</p>
-            <a routerLink="/">library</a>
+            <a routerLink="/portal">portal</a>
             <p class="braces">]</p>
         </div>
     </nav>
